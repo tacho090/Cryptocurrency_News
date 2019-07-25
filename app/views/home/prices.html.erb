@@ -1,0 +1,17 @@
+
+<% if @symbol %>
+    <% @quote ['DISPLAY'].each do |key, value| %>
+        <div class="jumbotron">
+        <h1 class = 'display-4'><%= key %></h1>
+        Price: <%= value['USD']['PRICE'] %><br/>
+        24 Hour High: <%= value['USD']['HIGHDAY'] %><br/>
+        24 Hour Low: <%= value['USD']['LOWDAY'] %><br/>
+        Marketcap: <%= value['USD']['MKTCAP'] %><br/>
+        </div>
+    <% end %>
+
+<% else %>
+
+    <h4>Please enter a crypto symbol in the form above... </h4>
+    
+<% end %>    

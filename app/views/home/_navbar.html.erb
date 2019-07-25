@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to "Crypto News Network", root_path, class: 'navbar-brand' %>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <%= link_to "Get Prices", home_prices_path, class: 'nav-link' %>
+      </li>
+
+    </ul>
+    <%= form_tag home_prices_path, :method => 'POST', class: 'form-inline my-2 my-lg-0' do %>
+    <%= text_field_tag 'sym', nil, placeholder: 'Enter Crypto Symbol', class: 'form-control mr-sm-2' %>
+    <%= submit_tag 'Lookup', class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+    <%  end %>
+
+  </div>
+</nav>

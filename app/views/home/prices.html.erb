@@ -1,5 +1,11 @@
 
-<% if @quote %>
+
+<% if @symbol %>
+
+    <% if @quote['Response']%>
+        <h4>That Crypto Symbol doesn't exist, please try again</h4>
+    <% else %>
+
     <% @quote["DISPLAY"].each do |key, value| %>
         <div class="jumbotron">
             <h1 class = 'display-4'><%= key %></h1>
@@ -8,6 +14,8 @@
             24 Hour Low: <%= value['USD']['LOWDAY'] %><br/>
             Marketcap: <%= value['USD']['MKTCAP'] %><br/>
         </div>
+    <% end %>
+
     <% end %>
 
 <% else %>

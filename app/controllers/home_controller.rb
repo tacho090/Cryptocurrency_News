@@ -20,9 +20,9 @@ class HomeController < ApplicationController
   def prices
     require 'net/http'
     require 'json'
+    @symbol = params[:sym]
 
     if @symbol
-      @symbol = params[:sym]
       @symbol = @symbol.upcase
 
       #Grab prices data
@@ -31,5 +31,7 @@ class HomeController < ApplicationController
       @quote_response = Net::HTTP.get(@quote_uri)
       @quote = JSON.parse(@quote_response)
     end
+
   end
+
 end

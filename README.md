@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built using this tutorial: https://www.udemy.com/course/build-a-cryptocurrency-news-site-with-ruby-on-rails/learn/lecture/12385504?start=0#overview
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Thanks to John Elder!
+Thanks to Codemy! :)
